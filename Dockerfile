@@ -49,6 +49,31 @@ RUN pip3 install sqlalchemy
 RUN pip3 install sqlalchemy --upgrade
 RUN pip3 install mysqlclient
 
+# Flask
+RUN pip3 install flask
+RUN pip3 install flask_babel
+RUN pip3 install flask-cors
+
+# pytz
+RUN pip3 install pytz
+
+# requests
+RUN pip3 install requests
+
+# beautifulsoup4
+RUN pip3 install beautifulsoup4
+
+# bcrypt
+RUN pip3 install bcrypt
+
+# MySQL connector
+RUN pip3 install mysql-connector-python
+
+# parameterized
+RUN pip3 install parameterized
+
+# bs4
+RUN pip3 install bs4
 
 # Set the locale
 RUN apt-get install -y locales
