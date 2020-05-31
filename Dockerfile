@@ -20,7 +20,7 @@ RUN apt-get install -y --force-yes mysql-server-5.7
 RUN apt-get install -y --force-yes libmysqlclient-dev
 
 # Python
-RUN apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev
+RUN apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev
 RUN cd /usr/src ; wget https://www.python.org/ftp/python/3.7.3/Python-3.7.3.tar.xz ; tar -xf Python-3.7.3.tar.xz ; cd Python-3.7.3 ; ./configure ; make altinstall
 
 # be sure it's 3.7 and not 3.6
@@ -42,6 +42,9 @@ RUN ln -s /usr/local/bin/pip3.7 /usr/local/bin/pip3
 
 # pycodestyle
 RUN pip3 install pycodestyle==2.5
+
+# MyPy
+RUN python3 -m pip install mypy
 
 # SQLAlchemy
 RUN pip3 install SQLAlchemy
