@@ -82,6 +82,10 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
+# Man
+RUN apt-get -y man manpages-dev manpages-posix-dev
+RUN unminimize
+
 # SSH
 RUN apt-get install -y openssh-server
 RUN mkdir /var/run/sshd
