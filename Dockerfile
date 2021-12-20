@@ -86,7 +86,7 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 
 # Man
-RUN apt-get -y man manpages-dev manpages-posix-dev
+RUN apt-get -y install man manpages-dev manpages-posix-dev
 RUN yes | unminimize
 
 # SSH
