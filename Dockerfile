@@ -54,7 +54,7 @@ RUN pip3 install mysqlclient
 
 # Flask
 RUN pip3 install flask
-RUN pip3 install flask_babel
+RUN pip3 install flask_babel==2.0.0
 RUN pip3 install flask-cors
 
 # pytz
